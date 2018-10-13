@@ -1,0 +1,40 @@
+# $Id: mmakefile.src
+
+include $(SRCDIR)/config/aros.cfg
+
+#MM- local-games : local-games-syobon local-games-syobon-bgm local-games-syobon-res local-games-syobon-se local-games-syobon-files 
+
+#MM  local-games-syobon : contrib-libiconv contrib-sdl contrib-sdl-sdl-image contrib-sdl-sdl-gfx contrib-sdl-sdl-mixer contrib-sdl-sdl-ttf
+
+FILES := main loadg DxLib
+
+NOWARN_FLAGS := $(NOWARN_ERROR)
+
+USER_CXXFLAGS := $(NOWARN_FLAGS)
+
+USER_INCLUDES:= -I$(AROS_CONTRIB_INCLUDES)
+
+USER_LDFLAGS := -L$(AROS_CONTRIB_LIB) -static-libstdc++
+
+EXEDIR := $(AROS_CONTRIB)/Games/Platform/SyobonAction
+
+%build_prog mmake=local-games-syobon \
+    progname=SyobonAction targetdir=$(EXEDIR) \
+    cxxfiles=$(FILES) uselibs="iconv SDL_image SDL_gfx png jpeg SDL_mixer mikmod vorbisfile vorbis ogg SDL_ttf freetype2 SDL"
+
+%copy_dir_recursive mmake=local-games-syobon-bgm src=BGM dst=$(EXEDIR)/BGM
+
+%copy_dir_recursive mmake=local-games-syobon-res src=res dst=$(EXEDIR)/res
+
+%copy_dir_recursive mmake=local-games-syobon-se src=SE dst=$(EXEDIR)/SE
+
+#MM
+local-games-syobon-files :
+	$(CP) $(SRCDIR)/$(CURDIR)/syobon.info $(EXEDIR)/syobon.info
+
+#MM
+contrib-simplemail-clean :
+	$(RM) $(EXEDIR)
+	$(RM) $(GENDIR)/$(CURDIR)
+
+%common

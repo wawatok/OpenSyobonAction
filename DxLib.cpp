@@ -27,13 +27,13 @@ int DxLib_Init()
     SDL_WM_SetCaption("Syobon Action (しょぼんのアクション)",
 		      NULL);
     SDL_ShowCursor(SDL_DISABLE);
-
+#ifndef __AROS__
     if(IMG_Init(IMG_INIT_PNG) != IMG_INIT_PNG)
     {
         fprintf(stderr, "Unable to init SDL_img: %s\n", IMG_GetError());
         return -1;
     }
-
+#endif
     //Initialize font
     if (TTF_Init() == -1) {
 	fprintf(stderr, "Unable to init SDL_ttf: %s\n", TTF_GetError());

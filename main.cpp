@@ -94,13 +94,13 @@ void rpaint()
 				     xx[1] / 100 + fmb,
 				     GetColor(255, 255,
 					      255),
-				     "ゲームクリアー");
+				     "Clear Play"/*"ゲームクリアー"*/);
 		if (ntype[t] == 102)
 		    DrawFormatString(xx[0] / 100 + fma,
 				     xx[1] / 100 + fmb,
 				     GetColor(255, 255,
 					      255),
-				     "プレイしてくれてありがとー");
+				     "Thanks for playing"/*"プレイしてくれてありがとー"*/);
 
 	    }
 	}			//t
@@ -846,27 +846,36 @@ void rpaint()
 	    xs[0] = "";
 
 	    if (mmsgtype == 1)
-		xs[0] = "お、おいしい!!";
+		xs[0] = "You're good!";
+		//xs[0] = "お、おいしい!!";
 	    if (mmsgtype == 2)
-		xs[0] = "毒は無いが……";
+		xs[0] = "No effect";
+		//xs[0] = "毒は無いが……";
 	    if (mmsgtype == 3)
-		xs[0] = "刺さった!!";
+		xs[0] = "Stuck!";
+		//xs[0] = "刺さった!!";
 	    if (mmsgtype == 10)
-		xs[0] = "食べるべきではなかった!!";
+		xs[0] = "Poison!";
+		//xs[0] = "食べるべきではなかった!!";
 	    if (mmsgtype == 11)
-		xs[0] = "俺は燃える男だ!!";
+		xs[0] = "I'm burning!";
+		//xs[0] = "俺は燃える男だ!!";
 	    if (mmsgtype == 50)
-		xs[0] = "体が……焼ける……";
+		xs[0] = "I'm burning!";
+		//xs[0] = "体が……焼ける……";
 	    if (mmsgtype == 51)
-		xs[0] = "たーまやー!!";
+		xs[0] = "Bleh!"/*"たーまやー!!"*/;
 	    if (mmsgtype == 52)
-		xs[0] = "見事にオワタ";
+		xs[0] = "Blah!"/*"見事にオワタ"*/;
 	    if (mmsgtype == 53)
-		xs[0] = "足が、足がぁ!!";
+		xs[0] = "Legs, get feet!";
+		//xs[0] = "足が、足がぁ!!";
 	    if (mmsgtype == 54)
-		xs[0] = "流石は摂氏800度!!";
+		xs[0] = "800°C!";
+		//xs[0] = "流石は摂氏800度!!";
 	    if (mmsgtype == 55)
-		xs[0] = "溶岩と合体したい……";
+		xs[0] = "I hate lava..";
+		//xs[0] = "溶岩と合体したい……";
 
 	    setc0();
 	    str(xs[0], (ma + mnobia + 300) / 100 - 1, mb / 100 - 1);
@@ -885,103 +894,114 @@ void rpaint()
 		xs[0] = "";
 
 		if (amsgtype[t] == 1001)
-		    xs[0] = "ヤッフー!!";
+			xs[0] = "Banzai!";
+		    //xs[0] = "ヤッフー!!";
 		if (amsgtype[t] == 1002)
-		    xs[0] = "え?俺勝っちゃったの?";
+			xs[0] = "I win!";
+		    //xs[0] = "え?俺勝っちゃったの?";
 		if (amsgtype[t] == 1003)
-		    xs[0] = "貴様の死に場所はここだ!";
+			xs[0] = "Die!";
+		    //xs[0] = "貴様の死に場所はここだ!";
 		if (amsgtype[t] == 1004)
-		    xs[0] = "二度と会う事もないだろう";
+			xs[0] = "Bye bye!";
+		    //xs[0] = "二度と会う事もないだろう";
 		if (amsgtype[t] == 1005)
-		    xs[0] = "俺、最強!!";
+			xs[0] = "I'm the strongest!";
+		    //xs[0] = "俺、最強!!";
 		if (amsgtype[t] == 1006)
-		    xs[0] = "一昨日来やがれ!!";
+			xs[0] = "Too bad!";
+		    //xs[0] = "一昨日来やがれ!!";
 		if (amsgtype[t] == 1007)
-		    xs[0] = "漢に後退の二文字は無い!!";
+			xs[0] = "Try again!";
+		    //xs[0] = "漢に後退の二文字は無い!!";
 		if (amsgtype[t] == 1008)
-		    xs[0] = "ハッハァ!!";
+			xs[0] = "Hahaha!";
+		    //xs[0] = "ハッハァ!!";
 
 		if (amsgtype[t] == 1011)
-		    xs[0] = "ヤッフー!!";
+			xs[0] = "Banzai!";
+		    //xs[0] = "ヤッフー!!";
 		if (amsgtype[t] == 1012)
-		    xs[0] = "え?俺勝っちゃったの?";
+			xs[0] = "I win!";
+		    //xs[0] = "え?俺勝っちゃったの?";
 		if (amsgtype[t] == 1013)
-		    xs[0] = "貴様の死に場所はここだ!";
+			xs[0] = "Die!";
+		    //xs[0] = "貴様の死に場所はここだ!";
 		if (amsgtype[t] == 1014)
-		    xs[0] = "身の程知らずが……";
+		    xs[0] = "Don't forget me!"/*"身の程知らずが……"*/;
 		if (amsgtype[t] == 1015)
-		    xs[0] = "油断が死を招く";
+		    xs[0] = "Caught!"/*"油断が死を招く"*/;
 		if (amsgtype[t] == 1016)
-		    xs[0] = "おめでたい奴だ";
+		    xs[0] = "Woohoo!"/*"おめでたい奴だ"*/;
 		if (amsgtype[t] == 1017)
-		    xs[0] = "屑が!!";
+		    xs[0] = "Wasted!"/*"屑が!!"*/;
 		if (amsgtype[t] == 1018)
-		    xs[0] = "無謀な……";
+		    xs[0] = "Reckless.."/*"無謀な……"*/;
 
 		if (amsgtype[t] == 1021)
-		    xs[0] = "ヤッフー!!";
+		    xs[0] = "Woot!"/*"ヤッフー!!"*/;
 		if (amsgtype[t] == 1022)
-		    xs[0] = "え?俺勝っちゃったの?";
+		    xs[0] = "I'm the winner!"/*"え?俺勝っちゃったの?"*/;
 		if (amsgtype[t] == 1023)
-		    xs[0] = "二度と会う事もないだろう";
+		    xs[0] = "See you!"/*"二度と会う事もないだろう"*/;
 		if (amsgtype[t] == 1024)
-		    xs[0] = "身の程知らずが……";
+		    xs[0] = "Har!"/*"身の程知らずが……"*/;
 		if (amsgtype[t] == 1025)
-		    xs[0] = "僕は……負けない!!";
+		    xs[0] = "You lose!"/*"僕は……負けない!!"*/;
 		if (amsgtype[t] == 1026)
-		    xs[0] = "貴様に見切れる筋は無い";
+		    xs[0] = "You're too weak!"/*"貴様に見切れる筋は無い"*/;
 		if (amsgtype[t] == 1027)
 		    xs[0] =
-			"今死ね、すぐ死ね、骨まで砕けろ!!";
+			"Die in a painful death!"/*"今死ね、すぐ死ね、骨まで砕けろ!!"*/;
 		if (amsgtype[t] == 1028)
-		    xs[0] = "任務完了!!";
+		    xs[0] = "Mission complete!"/*"任務完了!!"*/;
 
 		if (amsgtype[t] == 1031)
-		    xs[0] = "ヤッフー!!";
+		    xs[0] = "Banzai!"/*"ヤッフー!!"*/;
 		if (amsgtype[t] == 1032)
-		    xs[0] = "え?俺勝っちゃったの?";
+		    xs[0] = "Did I win?"/*"え?俺勝っちゃったの?"*/;
 		if (amsgtype[t] == 1033)
-		    xs[0] = "貴様の死に場所はここだ!";
+		    xs[0] = "This is your place to die!"/*"貴様の死に場所はここだ!"*/;
 		if (amsgtype[t] == 1034)
-		    xs[0] = "身の程知らずが……";
+		    xs[0] = "Watch me!"/*"身の程知らずが……"*/;
 		if (amsgtype[t] == 1035)
-		    xs[0] = "油断が死を招く";
+		    xs[0] = "Fatality!"/*"油断が死を招く"*/;
 		if (amsgtype[t] == 1036)
-		    xs[0] = "おめでたい奴だ";
+		    xs[0] = "Be happy!"/*"おめでたい奴だ"*/;
 		if (amsgtype[t] == 1037)
-		    xs[0] = "屑が!!";
+		    xs[0] = "Scraps!"/*"屑が!!"*/;
 		if (amsgtype[t] == 1038)
-		    xs[0] = "無謀な……";
+		    xs[0] = "Reckless.."/*"無謀な……"*/;
 
 		if (amsgtype[t] == 15)
-		    xs[0] = "鉄壁!!よって、無敵!!";
+		    xs[0] = "I'm invincible!"/*"鉄壁!!よって、無敵!!"*/;
 		if (amsgtype[t] == 16)
-		    xs[0] = "丸腰で勝てるとでも?";
+		    xs[0] = "I'm not even armed!"/*"丸腰で勝てるとでも?"*/;
 		if (amsgtype[t] == 17)
-		    xs[0] = "パリイ!!";
+		    xs[0] = "Booh!"/*"パリイ!!"*/;
 		if (amsgtype[t] == 18)
-		    xs[0] = "自業自得だ";
+		    xs[0] = "Caught!"/*"自業自得だ"*/;
 		if (amsgtype[t] == 20)
 		    xs[0] = "Zzz";
 		if (amsgtype[t] == 21)
-		    xs[0] = "ク、クマー";
+		    xs[0] = "Poing!"/*"ク、クマー"*/;
 		if (amsgtype[t] == 24)
 		    xs[0] = "?";
 		if (amsgtype[t] == 25)
-		    xs[0] = "食べるべきではなかった!!";
+		    xs[0] = "Eaten!"/*"食べるべきではなかった!!"*/;
 		if (amsgtype[t] == 30)
-		    xs[0] = "うめぇ!!";
+		    xs[0] = "Oh yeah!"/*"うめぇ!!"*/;
 		if (amsgtype[t] == 31)
-		    xs[0] = "ブロックを侮ったな?";
+		    xs[0] = "Woops?"/*"ブロックを侮ったな?"*/;
 		if (amsgtype[t] == 32)
-		    xs[0] = "シャキーン";
+		    xs[0] = "Shaking!"/*"シャキーン"*/;
 
 		if (amsgtype[t] == 50)
-		    xs[0] = "波動砲!!";
+		    xs[0] = "Wave the gun!"/*"波動砲!!"*/;
 		if (amsgtype[t] == 85)
-		    xs[0] = "裏切られたとでも思ったか?";
+		    xs[0] = "Do you think she cheated?"/*"裏切られたとでも思ったか?"*/;
 		if (amsgtype[t] == 86)
-		    xs[0] = "ポールアターック!!";
+		    xs[0] = "Yabadabadoo!"/*"ポールアターック!!"*/;
 
 		if (amsgtype[t] != 31) {
 		    xx[5] = (aa[t] + anobia[t] + 300 - fx) / 100;
@@ -1064,31 +1084,31 @@ void rpaint()
     if (mainZ == 2) {
 
 	setcolor(255, 255, 255);
-	str("制作・プレイに関わった方々",
+	str("People involved in production"/*"制作・プレイに関わった方々"*/,
 	    240 - 13 * 20 / 2, xx[12] / 100);
-	str("ステージ１　プレイ", 240 - 9 * 20 / 2, xx[13] / 100);
+	str("Stage 1 design"/*"ステージ１　プレイ"*/, 240 - 9 * 20 / 2, xx[13] / 100);
 	//Theres an encoding error here, this is only temporary
 	//str("æy@]`y",240-6*20/2,xx[14]/100);
-	str("TODO: Fix this encoding error...",240-6*20/2,xx[14]/100);
-	str("ステージ２　プレイ", 240 - 9 * 20 / 2, xx[15] / 100);
-	str("友人　willowlet ", 240 - 8 * 20 / 2, xx[16] / 100);
-	str("ステージ３　プレイ", 240 - 9 * 20 / 2, xx[17] / 100);
-	str("友人　willowlet ", 240 - 8 * 20 / 2, xx[18] / 100);
-	str("ステージ４　プレイ", 240 - 9 * 20 / 2, xx[19] / 100);
-	str("友人２　ann ", 240 - 6 * 20 / 2, xx[20] / 100);
-	str("ご協力", 240 - 3 * 20 / 2, xx[21] / 100);
-	str("Ｔ先輩", 240 - 3 * 20 / 2, xx[22] / 100);
-	str("Ｓ先輩", 240 - 3 * 20 / 2, xx[23] / 100);
-	str("動画技術提供", 240 - 6 * 20 / 2, xx[24] / 100);
-	str("Ｋ先輩", 240 - 3 * 20 / 2, xx[25] / 100);
-	str("動画キャプチャ・編集・エンコード",
+	str("blablabla",240-6*20/2,xx[14]/100);
+	str("Stage 2 design"/*"ステージ２　プレイ"*/, 240 - 9 * 20 / 2, xx[15] / 100);
+	str("My friend willowlet"/*"友人　willowlet "*/, 240 - 8 * 20 / 2, xx[16] / 100);
+	str("Stage 3 design"/*"ステージ３　プレイ"*/, 240 - 9 * 20 / 2, xx[17] / 100);
+	str("My friend willowlet"/*"友人　willowlet "*/, 240 - 8 * 20 / 2, xx[18] / 100);
+	str("Stage 4 design"/*"ステージ４　プレイ"*/, 240 - 9 * 20 / 2, xx[19] / 100);
+	str("My friend ann"/*"友人２　ann "*/, 240 - 6 * 20 / 2, xx[20] / 100);
+	str("Cooperation"/*"ご協力"*/, 240 - 3 * 20 / 2, xx[21] / 100);
+	str("Senior T"/*"Ｔ先輩"*/, 240 - 3 * 20 / 2, xx[22] / 100);
+	str("Senior S"/*"Ｓ先輩"*/, 240 - 3 * 20 / 2, xx[23] / 100);
+	str("Video technology"/*"動画技術提供"*/, 240 - 6 * 20 / 2, xx[24] / 100);
+	str("Senior K"/*"Ｋ先輩"*/, 240 - 3 * 20 / 2, xx[25] / 100);
+	str("Video capture encoding and editing"/*"動画キャプチャ・編集・エンコード"*/,
 	    240 - 16 * 20 / 2, xx[26] / 100);
 	str("willowlet ", 240 - 5 * 20 / 2, xx[27] / 100);
-	str("プログラム・描画・ネタ・動画編集",
+	str("Graphics program"/*"プログラム・描画・ネタ・動画編集"*/,
 	    240 - 16 * 20 / 2, xx[28] / 100);
-	str("ちく", 240 - 2 * 20 / 2, xx[29] / 100);
+	str("Chikuwa"/*"ちく"*/, 240 - 2 * 20 / 2, xx[29] / 100);
 
-	str("プレイしていただき　ありがとうございました〜", 240 - 22 * 20 / 2, xx[30] / 100);
+	str("Thank you for playing!"/*"プレイしていただき　ありがとうございました〜"*/, 240 - 22 * 20 / 2, xx[30] / 100);
     }
 //Showing lives
     if (mainZ == 10) {
@@ -1123,7 +1143,8 @@ void rpaint()
 	}
 
 	setcolor(0, 0, 0);
-	str("Enterキーを押せ!!", 240 - 8 * 20 / 2, 250);
+	str("Press Enter or Jump to start", 240 - 8 * 28 / 2, 250);
+	//str("Enterキーを押せ!!", 240 - 8 * 20 / 2, 250);
 
     }
     ScreenFlip();
@@ -1249,7 +1270,11 @@ void Mainprogram()
 
 	if (mkeytm <= 0) {
 	    if (CheckHitKey(KEY_INPUT_Z) == 1 || CheckHitKey(KEY_INPUT_UP) == 1
-		|| SDL_JoystickGetButton(joystick, JOYSTICK_JUMP)) {
+		//|| SDL_JoystickGetButton(joystick, JOYSTICK_JUMP)
+		//|| SDL_JoystickGetButton(joystick, JOYSTICK_JUMP1)
+		//|| SDL_JoystickGetButton(joystick, JOYSTICK_JUMP2)
+		//|| SDL_JoystickGetButton(joystick, JOYSTICK_JUMP3)
+		) {
 		if (actaon[1] == 10) {
 		    actaon[1] = 1;
 		    xx[0] = 1;
@@ -1260,7 +1285,8 @@ void Mainprogram()
 
 	if (CheckHitKey(KEY_INPUT_Z) == 1
 	    || CheckHitKey(KEY_INPUT_UP) == 1
-	    || SDL_JoystickGetButton(joystick, JOYSTICK_JUMP)) {
+	    //|| SDL_JoystickGetButton(joystick, JOYSTICK_JUMP)
+		) {
 	    if (mjumptm == 8 && md >= -900) {
 		md = -1300;
 //ダッシュ中
@@ -4731,7 +4757,9 @@ void deinit()
     SDL_JoystickClose(joystick);
 
 //Close libraries
+#ifndef __AROS__
     IMG_Quit();
+#endif
     TTF_Quit();
     Mix_Quit();
     SDL_Quit();
@@ -10461,85 +10489,97 @@ void ttmsg()
 	    setc1();
 //フォント
 	    setfont(20, 5);
-	    txmsg("テスト　hoge", 0);
+	    //txmsg("テスト　hoge", 0);
+		txmsg("Test   hoge", 0);
 	}
 
 	if (tmsg == 1) {
 	    setc1();
 	    txmsg("", 0);
-	    txmsg("ステージ 1 より", 0);
-	    txmsg("特殊的なものが増えたので", 1);
-	    txmsg("気をつけてくれよ〜", 2);
-	    txmsg
-		("後、アイテムの一部を利用するかも…", 4);
-	    txmsg("                       ちく より", 6);
+	    txmsg("Stage 1"/*"ステージ 1 より"*/, 0);
+	    txmsg("Nothing special, just"/*"特殊的なものが増えたので"*/, 1);
+	    txmsg("take good care of me." /*"気をつけてくれよ〜"*/, 2);
+	    txmsg("You might want to use some items."/*"後、アイテムの一部を利用するかも…"*/, 4);
+	    txmsg("                   -Chikuwa"/*"                       ちく より"*/, 6);
 	}
 
 	if (tmsg == 2) {
-	    txmsg("            ？が必要です ", 3);
-	    txmsg("                         m9(^Д^)", 6);
+		txmsg("[?] required :)", 3);
+		txmsg("          (^Д^) - m9", 6);
+	    //txmsg("            ？が必要です ", 3);
+	    //txmsg("                         m9(^Д^)", 6);
 	}
 
 	if (tmsg == 3) {
-	    txmsg("   別にコインに意味ないけどね ", 3);
-	    txmsg("                      (・ω・ )ﾉｼ", 6);
+		txmsg("Money money, dirty money..", 3);
+		txmsg("                             (・ω・) -Noshi", 6);
+	    //txmsg("   別にコインに意味ないけどね ", 3);
+	    //txmsg("                      (・ω・ )ﾉｼ", 6);
 	}
 
 	if (tmsg == 4) {
-	    txmsg("この先に隠しブロックがあります ", 2);
-	    txmsg("注意してください !!", 4);
+		txmsg("The first block is hidden", 2);
+		txmsg("Take note!", 4);
+	    //txmsg("この先に隠しブロックがあります ", 2);
+	    //txmsg("注意してください !!", 4);
 	}
 
 	if (tmsg == 5) {
 	    txmsg("", 0);
-	    txmsg(" 前回よりも難易度を下げましたので", 1);
-	    txmsg(" 気楽にプレイしてください    ", 3);
-	    txmsg("                       ちく より", 6);
+		txmsg("I lovered the difficulty from the", 1);
+		txmsg("previous one. Take it easy.", 3);
+		txmsg("                                    -Chikuwa", 6);
+	    //txmsg(" 前回よりも難易度を下げましたので", 1);
+	    //txmsg(" 気楽にプレイしてください    ", 3);
+	    //txmsg("                       ちく より", 6);
 	}
 
 	if (tmsg == 6) {
 	    txmsg("", 0);
-	    txmsg(" そこにいる敵のそばによると、      ", 1);
-	    txmsg
-		(" 自分と一緒にジャンプしてくれます。",
-		 2);
-	    txmsg("   可愛いですね。                  ", 3);
+		txmsg("The enemy nearby jumps along", 1);
+		txmsg("with you.", 2);
+		txmsg("It's cute, and maybe useful..", 3);
+	    //txmsg(" そこにいる敵のそばによると、      ", 1);
+	    //txmsg
+		//(" 自分と一緒にジャンプしてくれます。",
+		// 2);
+	    //txmsg("   可愛いですね。                  ", 3);
 	}
 
 	if (tmsg == 7) {
 	    txmsg("", 0);
-	    txmsg(" あの敵は連れて来れましたか?、     ", 1);
-	    txmsg(" 連れて来れなかった貴方は、        ", 2);
-	    txmsg(" そこの落とし穴から Let's dive!    ", 3);
+	    txmsg("I should bring an enemy"/*" あの敵は連れて来れましたか?、     "*/, 1);
+	    txmsg("here so that it could"/*" 連れて来れなかった貴方は、        "*/, 2);
+	    txmsg("help me crush the wall."/*" そこの落とし穴から Let's dive!    "*/, 3);
 	}
 
 	if (tmsg == 8) {
-	    txmsg("そんな容易に", 1);
-	    txmsg("ヒントに頼るもんじゃないぜ", 2);
-	    txmsg("ほら、さっさと次行きな!!", 3);
+	    txmsg("So easy. Not something to"/*"そんな容易に"*/, 1);
+	    txmsg("rely on tips. Here, the"/*"ヒントに頼るもんじゃないぜ"*/, 2);
+	    txmsg("following is going quickly!"/*"ほら、さっさと次行きな!!"*/, 3);
 	}
 
 	if (tmsg == 9) {
-	    txmsg(" 正真正銘のファイナルステージ。    ", 1);
-	    txmsg(" クリアすれば遂にエンディング!!    ", 2);
-	    txmsg(" その土管から戻ってもいいんだぜ?   ", 3);
+	    txmsg("The Genuine Final Stage"/*" 正真正銘のファイナルステージ。    "*/, 1);
+	    txmsg("If this is really the ending,"/*" クリアすれば遂にエンディング!!    "*/, 2);
+	    txmsg("should I come back from the pipes?"/*" その土管から戻ってもいいんだぜ?   "*/, 3);
 	}
 
 	if (tmsg == 10) {
 	    txmsg
-		(" 床が凍ってるから、すっごい滑るよ。",
+		("The floor is frozen and"/*" 床が凍ってるから、すっごい滑るよ。"*/,
 		 1);
-	    txmsg(" ", 2);
-	    txmsg(" 　                      ", 3);
+	    txmsg("really slippery.", 2);
+	    //txmsg(" 　                      ", 3);
 	}
 
 	if (tmsg == 100) {
-	    txmsg("え？私ですか？ ", 0);
-	    txmsg("いやぁ、ただの通りすがりの", 2);
-	    txmsg("ヒントブロックですよ〜", 3);
+	    txmsg("What? Me?"/*"え？私ですか？ "*/, 0);
+	    txmsg("Well, just passing"/*"いやぁ、ただの通りすがりの"*/, 2);
+	    txmsg("I tip the block"/*"ヒントブロックですよ〜"*/, 3);
 	    txmsg
-		("決して怪しいブロックじゃないですよ", 5);
-	    txmsg("                          (…チッ)", 6);
+		("Is not it strange never block"/*"決して怪しいブロックじゃないですよ"*/, 5);
+	    txmsg("                 (Chip)"/*"                          (…チッ)"*/, 6);
 	}
 
 	setfont(16, 4);

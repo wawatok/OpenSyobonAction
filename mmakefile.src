@@ -32,6 +32,7 @@ EXEDIR := $(AROS_CONTRIB)/Games/Platform/SyobonAction
 #MM
 local-games-syobon-files :
 	$(CP) $(SRCDIR)/$(CURDIR)/syobon.info $(EXEDIR)/syobon.info
+	$(CP) $(SRCDIR)/$(CURDIR)/README.md $(EXEDIR)/README.md
 
 #MM
 contrib-simplemail-clean :

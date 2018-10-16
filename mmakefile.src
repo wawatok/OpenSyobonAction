@@ -2,9 +2,10 @@
 
 include $(SRCDIR)/config/aros.cfg
 
-#MM- local-games : local-games-syobon local-games-syobon-bgm local-games-syobon-res local-games-syobon-se local-games-syobon-files 
+#MM- local-games : local-games-syobon 
 
-#MM  local-games-syobon : contrib-libiconv contrib-sdl contrib-sdl-sdl-image contrib-sdl-sdl-gfx contrib-sdl-sdl-mixer contrib-sdl-sdl-ttf
+#MM  local-games-syobon : contrib-libiconv contrib-sdl contrib-sdl-sdl-image contrib-sdl-sdl-gfx contrib-sdl-sdl-mixer contrib-sdl-sdl-ttf \
+#MM  local-games-syobon-bgm local-games-syobon-res local-games-syobon-se local-games-syobon-files
 
 FILES := main loadg DxLib
 
@@ -19,14 +20,14 @@ USER_LDFLAGS := -L$(AROS_CONTRIB_LIB) -static-libstdc++
 EXEDIR := $(AROS_CONTRIB)/Games/Platform/SyobonAction
 
 %build_prog mmake=local-games-syobon \
-    progname=SyobonAction targetdir=$(EXEDIR) \
+    progname=syobon targetdir=$(EXEDIR) \
     cxxfiles=$(FILES) uselibs="iconv SDL_image SDL_gfx png jpeg SDL_mixer mikmod vorbisfile vorbis ogg SDL_ttf freetype2 SDL"
 
-%copy_dir_recursive mmake=local-games-syobon-bgm src=BGM dst=$(EXEDIR)/BGM
+%copy_dir_recursive mmake=local-games-syobon-bgm src=$(SRCDIR)/$(CURDIR)/BGM dst=$(EXEDIR)/BGM
 
-%copy_dir_recursive mmake=local-games-syobon-res src=res dst=$(EXEDIR)/res
+%copy_dir_recursive mmake=local-games-syobon-res src=$(SRCDIR)/$(CURDIR)/res dst=$(EXEDIR)/res
 
-%copy_dir_recursive mmake=local-games-syobon-se src=SE dst=$(EXEDIR)/SE
+%copy_dir_recursive mmake=local-games-syobon-se src=$(SRCDIR)/$(CURDIR)/SE dst=$(EXEDIR)/SE
 
 #MM
 local-games-syobon-files :
